@@ -17,7 +17,18 @@ timer = setInterval(animate, interval);
 
 function animate(){
         context.clearRect(0, 0, canvas.width, canvas.height);
-        player.drawRect();
 
+         // player movement
+        if(w)
+        {
+                player.y -= 4
+        }
+
+        if(s)
+        {
+                player.y += 4
+        }
+        player.drawRect();
+        player.move();
 }
 
